@@ -10,12 +10,12 @@ jobs:
         with:
           path: habitica
           repository: HabitRPG/habitica
-          ref: 'develop'
+          ref: 'release'
       - run: |
           cd habitica
           cp config.json.example config.json
           npm ci
-          node ./website/server/index.js & cd ..
+          npm start & cd ..
       - name: Checkout Zapier interation
         uses: actions/checkout@v2
         with:
