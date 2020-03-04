@@ -15,7 +15,7 @@ jobs:
           cd habitica
           cp config.json.example config.json
           npm ci
-          npm start & cd ..
+          NODE_ENV=production npm start & cd ..
       - name: Checkout Zapier interation
         uses: actions/checkout@v2
         with:
