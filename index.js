@@ -40,6 +40,7 @@ const App = {
     (request, z, bundle) => {
       request.headers['x-api-user'] = bundle.authData.userId;
       request.headers['x-api-key'] = bundle.authData.apiKey;
+      request.headers['x-client'] = bundle.authData.userId + "-zapier"
 
       return request;
     }
